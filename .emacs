@@ -27,5 +27,5 @@
 (eval-when-compile
   (require 'use-package))
 
-general-config
+;; general-config
 (require 'general-config)
