@@ -4,7 +4,8 @@
 
 ;; initialize package archives
 (require 'package)
-(setq package-archives
+(setq package-enable-at-startup nil
+	  package-archives
 	  '(("gnu" . "http://elpa.gnu.org/packages/")
 		("elpy" . "https://jorgenschaefer.github.io/packages/")
 		("marmalade" . "http://marmalade-repo.org/elpa/")
