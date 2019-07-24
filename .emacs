@@ -26,3 +26,6 @@
 ;; enable use-package for compile
 (eval-when-compile
   (require 'use-package))
+
+general-config
+(require 'general-config)
