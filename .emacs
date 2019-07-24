@@ -1,3 +1,6 @@
+(eval-when-compile
+  (require 'cl-lib))
+
 (require 'package)
 (setq package-archives
 	  '(("gnu" . "http://elpa.gnu.org/packages/")
