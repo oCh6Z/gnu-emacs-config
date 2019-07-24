@@ -1,3 +1,4 @@
+(require 'package)
 (setq package-archives
 	  '(("gnu" . "http://elpa.gnu.org/packages/")
 		("elpy" . "https://jorgenschaefer.github.io/packages/")
@@ -9,3 +10,4 @@
 	  '(("gnu" . 10)
 		("melpa-stbl" . 5)
 		("melpa" . 3)))
+(package-initialize)
