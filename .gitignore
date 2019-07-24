@@ -4,5 +4,6 @@
 !/.emacs.d
 /.emacs.d/*
 !/.emacs.d/.gitkeep
+!/.emacs.d/configurations
 /.emacs.d/configurations/*
 !/.emacs.d/configurations/.gitkeep
