@@ -32,15 +32,14 @@
 			 :init
 			 (setq whitespace-style '(face trailing tabs spaces newline empty space-mark tab-mark newline-mark))
 			 (global-whitespace-mode t)
+			 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 			 :custom-face
 			 (whitespace-trailing ((t (:background "light gray" :foreground "dark-violet"))))
 			 (whitespace-tab ((t (:background "light gray" :foreground "red"))))
 			 (whitespace-space-after-tab ((t (:background nil :foreground "yellow"))))
 			 (whitespace-space ((t (:background nil :foreground "red"))))
 			 (whitespace-newline ((t (:background nil :foreground "red"))))
-			 (whitespace-empty ((t (:background "light gray" :foreground nil))))
-			 :hook
-			 (before-save-hook . delete-trailing-whitespace))
+			 (whitespace-empty ((t (:background "light gray" :foreground nil)))))
 
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
