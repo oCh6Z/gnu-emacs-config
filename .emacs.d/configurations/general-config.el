@@ -70,7 +70,7 @@
 			 (recentf-mode t))
 
 (use-package menu-bar
-			 :custome-face
+			 :custom-face
 			 (menu ((t (:background "color-235" :foreground "color-246"))))
 			 :config
 			 (menu-bar-mode t))
