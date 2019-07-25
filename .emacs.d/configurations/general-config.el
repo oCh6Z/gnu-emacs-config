@@ -16,13 +16,6 @@
   (toggle-indicate-empty-lines))
 
 (setq tab-stop-list (number-sequence 4 200 4)
-	  backup-by-copying t
-	  version-control t
-	  delete-old-versions t
-	  kept-old-versions 1
-	  kept-new-versions 5
-	  backup-directory-alist '(("" . "~/.emacs.d/backup"))
-	  vc-make-backup-files t
 	  auto-save-default nil
 	  ring-bell-function #'ignore
 	  inhibit-startup-screen t
@@ -51,6 +44,17 @@
 			 :init
 			 (setq time-stamp-pattern '("8/Last modified:[ \t]+\\\\?[\"<]+%:y-%02m-%02d %02H:%02M:%02S\\\\?[\">]"))
 			 (add-hook 'before-save-hook 'time-stamp))
+
+(use-package backup
+			 :defer t
+			 :init
+			 (setq backup-by-copying t
+				   version-control t
+				   delete-old-versions t
+				   kept-old-versions 1
+				   kept-new-versions 5
+				   backup-directory-alist '(("" . "~/.emacs.d/backup"))
+				   vc-make-backup-files t))
 
 (use-package uniquify
 			 :init
