@@ -13,8 +13,6 @@
   (toggle-indicate-empty-lines))
 
 (setq ring-bell-function #'ignore
-	  inhibit-startup-screen t
-	  initial-scratch-message nil
 	  blink-cursor-mode t
 	  line-number-mode t
 	  column-number-mode t
