@@ -76,6 +76,11 @@
 			 :config
 			 (tool-bar-mode 0))
 
+(use-package faces
+			 :custome-face
+			 (tty-menu-disabled-face ((t (:background "color-242" :foreground "lightgray"))))
+			 (tty-menu-enabled-face ((t (:background "color-246" :foreground "color-235")))))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
