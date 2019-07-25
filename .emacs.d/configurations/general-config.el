@@ -86,8 +86,9 @@
 			 (tty-menu-enabled-face ((t (:background "color-246" :foreground "color-235")))))
 
 (use-package ample-theme
-			 :init (progn (load-theme 'ample t t)
-						  (enable-theme 'ample))
+			 :init
+			 (progn (load-theme 'ample t t)
+					(enable-theme 'ample))
 			 :defer t
 			 :ensure t)
 
