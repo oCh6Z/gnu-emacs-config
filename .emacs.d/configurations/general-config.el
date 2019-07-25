@@ -31,6 +31,10 @@
 			 (add-hook 'electric-pair-mode-hook
 					   (lambda ()
 						 (setq electric-pair-pairs
+							   '((?\{ . ?\})))))
+			 (add-hook 'electric-pair-local-mode-hook
+					   (lambda ()
+						 (setq electric-pair-pairs
 							   '((?\{ . ?\}))))))
 
 (use-package editing-basics
