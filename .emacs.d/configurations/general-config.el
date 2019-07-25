@@ -69,6 +69,12 @@
 			 :config
 			 (recentf-mode t))
 
+(use-package menu-bar
+			 :custome-face
+			 (menu ((t (:background "color-235" :foreground "color-246"))))
+			 :config
+			 (menu-bar-mode t))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
