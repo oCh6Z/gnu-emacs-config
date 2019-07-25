@@ -1,3 +1,13 @@
+(setq package-enable-at-startup nil
+	  gc-cons-threshold 64000000
+	  gc-cons-percentage 0.6)
+
+(add-hook 'after-init-hook
+		  (lambda ()
+			(setq gc-cons-threshold 800000
+				  gc-cons-percentage 0.1)
+			(garbage-collect)) t)
+
 ;; tool bar, scroll bar
 (if window-system
 	(tool-bar-mode 0)
