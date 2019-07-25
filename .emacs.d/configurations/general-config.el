@@ -28,6 +28,21 @@
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
 
+(use-package whitespace
+			 :init
+			 (setq whitespace-style '(face trailing tabs spaces newline empty space-mark tab-mark newline-mark))
+			 :custom-face
+			 (whitespace-trailing ((t (:background "light gray" :foreground "dark-violet"))))
+			 (whitespace-tab ((t (:background "light gray" :foreground "red"))))
+			 (whitespace-space-after-tab ((t (:background nil :foreground "yellow"))))
+			 (whitespace-space ((t (:background nil :foreground "red"))))
+			 (whitespace-newline ((t (:background nil :foreground "red"))))
+			 (whitespace-empty ((t (:background "light gray" :foreground nil))))
+			 :config
+			 (global-whitespace-mode t)
+			 :hook
+			 (before-save-hook . delete-trailing-whitespace))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
