@@ -79,6 +79,12 @@
 			 :config
 			 (recentf-mode t))
 
+(use-package initialization
+			 :defer t
+			 :init
+			 (setq inhibit-startup-screen t
+				   initial-scratch-message nil))
+
 (use-package menu-bar
 			 :custom-face
 			 (menu ((t (:background "color-235" :foreground "color-246"))))
