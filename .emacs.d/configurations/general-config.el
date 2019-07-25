@@ -75,6 +75,12 @@
 			 :config
 			 (menu-bar-mode t))
 
+(use-package tool-bar
+			 :if
+			 window-system
+			 :config
+			 (tool-bar-mode 0))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
