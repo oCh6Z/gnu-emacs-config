@@ -13,10 +13,12 @@
 	(tool-bar-mode 0)
   (scroll-all-mode t))
 
-(setq-default indicate-empty-lines t
+(setq-default indent-tabs-mode t
+			  indicate-empty-lines t
 			  tab-width 4
-			  truncate-lines t
-			  indent-tabs-mode t)
+			  truncate-lines t)
+(when (not indicate-empty-lines)
+  (toggle-indicate-empty-lines))
 
 (setq tab-stop-list (number-sequence 4 200 4)
 	  backup-by-copying t
