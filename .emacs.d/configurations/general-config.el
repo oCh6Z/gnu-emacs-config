@@ -8,7 +8,6 @@
 			(garbage-collect)) t)
 
 (setq-default indicate-empty-lines t
-			  tab-width 4
 			  truncate-lines t)
 (when (not indicate-empty-lines)
   (toggle-indicate-empty-lines))
@@ -29,6 +28,11 @@
 			 :init
 			 (setq-default indent-tabs-mode t)
 			 (setq tab-stop-list (number-sequence 4 200 4)))
+
+(use-package editing-basics
+			 :defer t
+			 :init
+			 (setq-default tab-width 4))
 
 (use-package whitespace
 			 :init
