@@ -21,6 +21,18 @@
 			 (setq-default indent-tabs-mode t)
 			 (setq tab-stop-list (number-sequence 4 200 4)))
 
+(use-package electricity
+			 :defer t
+			 :preface
+			 (defun electric-pair-start ()
+			   (electric-pair-mode t))
+			 :init
+			 (add-hook 'after-init-hook 'electric-pair-start)
+			 (add-hook 'electric-pair-mode-hook
+					   (lambda ()
+						 (setq electric-pair-pairs
+							   '((?\{ . ?\}))))))
+
 (use-package editing-basics
 			 :defer t
 			 :init
