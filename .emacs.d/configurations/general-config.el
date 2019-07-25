@@ -31,6 +31,7 @@
 (use-package whitespace
 			 :init
 			 (setq whitespace-style '(face trailing tabs spaces newline empty space-mark tab-mark newline-mark))
+			 (global-whitespace-mode t)
 			 :custom-face
 			 (whitespace-trailing ((t (:background "light gray" :foreground "dark-violet"))))
 			 (whitespace-tab ((t (:background "light gray" :foreground "red"))))
@@ -38,8 +39,6 @@
 			 (whitespace-space ((t (:background nil :foreground "red"))))
 			 (whitespace-newline ((t (:background nil :foreground "red"))))
 			 (whitespace-empty ((t (:background "light gray" :foreground nil))))
-			 :config
-			 (global-whitespace-mode t)
 			 :hook
 			 (before-save-hook . delete-trailing-whitespace))
 
