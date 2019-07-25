@@ -9,7 +9,6 @@
 			  indent-tabs-mode t)
 
 (setq tab-stop-list (number-sequence 4 200 4)
-	  time-stamp-pattern '("8/Last modified:[ \t]+\\\\?[\"<]+%:y-%02m-%02d %02H:%02M:%02S\\\\?[\">]")
 	  backup-by-copying t
 	  version-control t
 	  delete-old-versions t
