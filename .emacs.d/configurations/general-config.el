@@ -1,5 +1,4 @@
-(setq package-enable-at-startup nil
-	  gc-cons-threshold 64000000
+(setq gc-cons-threshold 64000000
 	  gc-cons-percentage 0.6)
 
 (add-hook 'after-init-hook
