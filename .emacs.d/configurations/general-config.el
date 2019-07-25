@@ -64,11 +64,11 @@
 
 (use-package uniquify
 			 :init
-			 (setq uniquify-buffer-name-style 'post-forward)
-			 (setq uniquify-after-kill-buffer-p t)
-			 (setq uniquify-ignore-buffers-re "^\\*")
-			 (setq uniquify-min-dir-content 3)
-			 (setq uniquify-separator "|"))
+			 (setq uniquify-buffer-name-style 'post-forward
+				   uniquify-after-kill-buffer-p t
+				   uniquify-ignore-buffers-re "^\\*"
+				   uniquify-min-dir-content 3
+				   uniquify-separator "|"))
 
 (use-package auto-save
 			 :defer t
