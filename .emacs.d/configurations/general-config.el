@@ -14,8 +14,6 @@
 
 (setq ring-bell-function #'ignore
 	  blink-cursor-mode t
-	  line-number-mode t
-	  column-number-mode t
 	  font-use-system-font nil
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
@@ -82,6 +80,11 @@
 			 :init
 			 (setq inhibit-startup-screen t
 				   initial-scratch-message nil))
+
+(use-package mode-line
+			 :defer t
+			 :init
+			 (setq column-number-mode t))
 
 (use-package menu-bar
 			 :custom-face
