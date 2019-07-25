@@ -70,6 +70,11 @@
 			 (setq uniquify-min-dir-content 3)
 			 (setq uniquify-separator "|"))
 
+(use-package auto-save
+			 :defer t
+			 :init
+			 (setq auto-save-default nil))
+
 (use-package recentf
 			 :config
 			 (recentf-mode t))
