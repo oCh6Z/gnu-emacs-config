@@ -7,13 +7,11 @@
 				  gc-cons-percentage 0.1)
 			(garbage-collect)) t)
 
-(setq-default indicate-empty-lines t
-			  truncate-lines t)
+(setq-default indicate-empty-lines t)
 (when (not indicate-empty-lines)
   (toggle-indicate-empty-lines))
 
-(setq ring-bell-function #'ignore
-	  blink-cursor-mode t
+(setq blink-cursor-mode t
 	  font-use-system-font nil
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
@@ -85,6 +83,12 @@
 			 :defer t
 			 :init
 			 (setq column-number-mode t))
+
+(use-package display
+			 :defer t
+			 :init
+			 (setq-default truncate-lines t)
+			 (setq ring-bell-function #'ignore))
 
 (use-package menu-bar
 			 :custom-face
