@@ -8,11 +8,6 @@
 				  gc-cons-percentage 0.1)
 			(garbage-collect)) t)
 
-;; tool bar, scroll bar
-(if window-system
-	(tool-bar-mode 0)
-  (scroll-all-mode t))
-
 (setq-default indent-tabs-mode t
 			  indicate-empty-lines t
 			  tab-width 4
