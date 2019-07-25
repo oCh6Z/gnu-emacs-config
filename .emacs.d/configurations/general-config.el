@@ -46,6 +46,14 @@
 			 (setq time-stamp-pattern '("8/Last modified:[ \t]+\\\\?[\"<]+%:y-%02m-%02d %02H:%02M:%02S\\\\?[\">]"))
 			 (add-hook 'before-save-hook 'time-stamp))
 
+(use-package uniquify
+			 :init
+			 (setq uniquify-buffer-name-style 'post-forward)
+			 (setq uniquify-after-kill-buffer-p t)
+			 (setq uniquify-ignore-buffers-re "^\\*")
+			 (setq uniquify-min-dir-content 3)
+			 (setq uniquify-separator "|"))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
