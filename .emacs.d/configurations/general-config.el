@@ -53,6 +53,10 @@
 			 (setq uniquify-min-dir-content 3)
 			 (setq uniquify-separator "|"))
 
+(use-package recentf
+			 :config
+			 (recentf-mode t))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
