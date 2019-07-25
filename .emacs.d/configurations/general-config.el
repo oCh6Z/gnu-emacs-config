@@ -41,6 +41,11 @@
 			 (whitespace-newline ((t (:background nil :foreground "red"))))
 			 (whitespace-empty ((t (:background "light gray" :foreground nil)))))
 
+(use-package time-stamp
+			 :init
+			 (setq time-stamp-pattern '("8/Last modified:[ \t]+\\\\?[\"<]+%:y-%02m-%02d %02H:%02M:%02S\\\\?[\">]"))
+			 (add-hook 'before-save-hook 'time-stamp))
+
 (use-package ample-theme
 			 :init (progn (load-theme 'ample t t)
 						  (enable-theme 'ample))
