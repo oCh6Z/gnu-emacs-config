@@ -12,8 +12,7 @@
 (when (not indicate-empty-lines)
   (toggle-indicate-empty-lines))
 
-(setq auto-save-default nil
-	  ring-bell-function #'ignore
+(setq ring-bell-function #'ignore
 	  inhibit-startup-screen t
 	  initial-scratch-message nil
 	  blink-cursor-mode t
