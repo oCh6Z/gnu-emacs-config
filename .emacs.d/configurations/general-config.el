@@ -28,5 +28,11 @@
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
 
+(use-package ample-theme
+			 :init (progn (load-theme 'ample t t)
+						  (enable-theme 'ample))
+			 :defer t
+			 :ensure t)
+
 ;; add the symbol name to the features list
 (provide 'general-config)
