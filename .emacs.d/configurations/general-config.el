@@ -18,6 +18,7 @@
   (toggle-indicate-empty-lines))
 
 (setq blink-cursor-mode t
+	  font-use-system-font nil
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
 
