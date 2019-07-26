@@ -37,6 +37,14 @@
 						 (setq electric-pair-pairs
 							   '((?\{ . ?\}))))))
 
+(use-package paren-showing
+			 :defer t
+			 :preface
+			 (defun show-paren-start ()
+			   (show-paren-mode t))
+			 :init
+			 (add-hook 'after-init-hook 'show-paren-start))
+
 (use-package editing-basics
 			 :defer t
 			 :init
