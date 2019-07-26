@@ -21,6 +21,8 @@
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (use-package indent
 			 :defer t
 			 :init
