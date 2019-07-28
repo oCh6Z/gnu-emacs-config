@@ -32,3 +32,6 @@
 
 ;; general-config
 (require 'general-config)
+
+;; miscellaneous-config
+(require 'miscellaneous-config)
