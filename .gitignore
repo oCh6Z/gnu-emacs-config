@@ -8,3 +8,4 @@
 /.emacs.d/configurations/*
 !/.emacs.d/configurations/.gitkeep
 !/.emacs.d/configurations/general-config.el
+!/.emacs.d/configurations/miscellaneous-config.el
