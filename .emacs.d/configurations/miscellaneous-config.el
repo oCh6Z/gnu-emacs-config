@@ -16,5 +16,11 @@
 		company-dabbrev-code-ignore-case nil
 		company-dabbrev-downcase nil))
 
+(use-package slime
+  :ensure t
+  :init
+  (setq inferior-lisp-program "sbcl"
+		slime-contribs '(slime-fancy)))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
