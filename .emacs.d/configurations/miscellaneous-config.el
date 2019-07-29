@@ -52,5 +52,10 @@
   (yas-reload-all)
   (yas-global-mode t))
 
+(use-package yasnippet-snippets
+  :ensure t
+  :defer t
+  :after yasnippet)
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
