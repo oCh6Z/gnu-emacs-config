@@ -57,5 +57,10 @@
   :defer t
   :after yasnippet)
 
+(use-package yasnippet-classic-snippets
+  :ensure t
+  :defer t
+  :after yasnippet)
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
