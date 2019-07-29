@@ -16,6 +16,13 @@
 		company-dabbrev-code-ignore-case nil
 		company-dabbrev-downcase nil))
 
+(use-package company-quickhelp
+  :ensure t
+  :after company
+  :init
+  (with-eval-after-load 'company
+	(company-quickhelp-mode)))
+
 (use-package slime
   :ensure t
   :init
