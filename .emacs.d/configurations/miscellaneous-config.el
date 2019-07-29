@@ -41,5 +41,16 @@
   :ensure t
   :defer t)
 
+(use-package yasnippet
+  :ensure t
+  :init
+  (add-hook 'prog-mode-hook #'yas-minor-mode)
+  :config
+  (setq yas-snippet-dirs
+		(cl-union yas-snippet-dirs
+				  '("~/.emacs.d/snippets")))
+  (yas-reload-all)
+  (yas-global-mode t))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
