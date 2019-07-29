@@ -37,5 +37,9 @@
   :init
   (slime-setup '(slime-fancy slime-company)))
 
+(use-package hydra
+  :ensure t
+  :defer t)
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
