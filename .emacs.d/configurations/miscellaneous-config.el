@@ -22,5 +22,13 @@
   (setq inferior-lisp-program "sbcl"
 		slime-contribs '(slime-fancy)))
 
+(use-package slime-company
+  :ensure t
+  :defer t
+  :after
+  (:all slime company)
+  :init
+  (slime-setup '(slime-fancy slime-company)))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
