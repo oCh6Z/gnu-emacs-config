@@ -26,6 +26,8 @@
 
 (setq blink-cursor-mode t
 	  font-use-system-font nil
+	  byte-compile-warnings nil
+	  byte-compile-error-on-warn nil
 	  browse-url-browser-function 'browse-url-generic
 	  browse-url-generic-program "chromium")
 
