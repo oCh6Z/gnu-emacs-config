@@ -35,3 +35,6 @@
 
 ;; miscellaneous-config
 (require 'miscellaneous-config)
+
+;; python-config
+(require 'python-config)
