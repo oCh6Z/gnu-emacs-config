@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package python
-  :ensure nill
+  :ensure nil
   :mode
   ("\\.py$" . python-mode)
   :config
