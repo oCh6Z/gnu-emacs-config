@@ -16,5 +16,12 @@
 		; python-shell-interpreter-args "--simple-prompt -i"
 		))
 
+(use-package elpy
+  :ensure t
+  :defer t
+  :after python
+  :init
+  (add-hook 'python-mode-hook 'elpy-mode))
+
 ;; add the symbol name to the features list
 (provide 'python-config)
