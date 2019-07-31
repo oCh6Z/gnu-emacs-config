@@ -37,5 +37,13 @@
   :init
   (add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate))
 
+(use-package py-autopep8
+  :ensure t
+  :after python
+  :config
+  (setq py-autopep8-options '("--max-line-length=100"))
+  :init
+  (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
+
 ;; add the symbol name to the features list
 (provide 'python-config)
