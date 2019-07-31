@@ -23,5 +23,12 @@
   :init
   (add-hook 'python-mode-hook 'elpy-mode))
 
+(use-package virtualenvwrapper
+  :ensure t
+  :after python
+  :config
+  (setq venv-location "~/.pyenv/versions/")
+  (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format)))
+
 ;; add the symbol name to the features list
 (provide 'python-config)
