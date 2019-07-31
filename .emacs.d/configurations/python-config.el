@@ -45,5 +45,13 @@
   :init
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
 
+(use-package py-isort
+  :ensure t
+  :after python
+  :config
+  (setq py-isort-options '("--lines=100"))
+  :init
+  (add-hook 'before-save-hook 'py-isort-before-save))
+
 ;; add the symbol name to the features list
 (provide 'python-config)
