@@ -30,5 +30,12 @@
   (setq venv-location "~/.pyenv/versions/")
   (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format)))
 
+(use-package auto-virtualenvwrapper
+  :ensure t
+  :after
+  (:all python virtualenvwrapper)
+  :init
+  (add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate))
+
 ;; add the symbol name to the features list
 (provide 'python-config)
