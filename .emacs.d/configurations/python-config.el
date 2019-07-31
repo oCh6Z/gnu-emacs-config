@@ -21,7 +21,23 @@
   :defer t
   :after python
   :init
-  (add-hook 'python-mode-hook 'elpy-mode))
+  (add-hook 'python-mode-hook 'elpy-mode)
+  ;; :config
+  ;; (elpy-rpc-backend "jedi")
+  )
+
+;; (use-package company-jedi
+;;   :ensure t
+;;   :defer t
+;;   :after
+;;   (:all python jedi company)
+;;   :preface
+;;   (defun enable-jedi ()
+;; 	(setq-local company-backends
+;; 				(append '(company-jedi) company-backends)))
+;;   :init
+;;   (with-eval-after-load 'company
+;; 	(add-hook 'python-mode-hook 'enable-jedi)))
 
 (use-package virtualenvwrapper
   :ensure t
