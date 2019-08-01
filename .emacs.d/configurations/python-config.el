@@ -2,6 +2,7 @@
 ;; Python configurations ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; python language in emacs
 (use-package python
   :ensure nil
   :mode
@@ -16,6 +17,7 @@
 		; python-shell-interpreter-args "--simple-prompt -i"
 		))
 
+;; emacs python development environment
 (use-package elpy
   :ensure t
   :defer t
@@ -39,11 +41,13 @@
 ;;   (with-eval-after-load 'company
 ;; 	(add-hook 'python-mode-hook 'enable-jedi)))
 
+;; minor mode for working with django projects
 (use-package pony-mode
   :ensure t
   :defer t
   :after python)
 
+;; featureful virtualenv tool for emacs
 (use-package virtualenvwrapper
   :ensure t
   :after python
@@ -51,6 +55,7 @@
   (setq venv-location "~/.pyenv/versions/")
   (setq-default mode-line-format (cons '(:exec venv-current-name) mode-line-format)))
 
+;; lightweight auto activate python virtualenvs
 (use-package auto-virtualenvwrapper
   :ensure t
   :after
@@ -58,6 +63,7 @@
   :init
   (add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate))
 
+;; use autopep8 to beautify a python buffer
 (use-package py-autopep8
   :ensure t
   :after python
@@ -66,6 +72,7 @@
   :init
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save))
 
+;; use isort to sort the imports in a python buffer
 (use-package py-isort
   :ensure t
   :after python
