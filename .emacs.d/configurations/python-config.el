@@ -39,6 +39,11 @@
 ;;   (with-eval-after-load 'company
 ;; 	(add-hook 'python-mode-hook 'enable-jedi)))
 
+(use-package pony-mode
+  :ensure t
+  :defer t
+  :after python)
+
 (use-package virtualenvwrapper
   :ensure t
   :after python
