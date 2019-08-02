@@ -70,5 +70,27 @@
   :defer t
   :after yasnippet)
 
+(use-package org
+  :defer t
+  :mode
+  ("\\.org$" . org-mode)
+  ("\\.txt$" . org-mode)
+  :config
+  (setq org-directory "~/.emacs.d/org"
+		org-default-notes-file (concat org-directory "/notes.org")
+		org-log-done 'time
+		org-todo-keywords
+		'((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE"))
+		org-todo-keyword-faces
+		'(("IN-PROGRESS" . (:foreground "steel blue"))
+		  ("WAITING" . (:foreground "dark orange")))
+		org-tag-alist '(("thesis" . ?t)
+						("theory")
+						("code" . ?c)
+						("python" . ?p)
+						("vue" . ?v)
+						("work" . ?w)
+						("home" . ?h))))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
