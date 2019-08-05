@@ -92,5 +92,20 @@
 						("work" . ?w)
 						("home" . ?h))))
 
+(use-package org-babel
+  :defer t
+  :after
+  (:all org ob
+		auctex latex reftex
+		python)
+  :config
+  (org-babel-do-load-languages
+   'org-babel-do-load-languages
+   ((emacs-lisp . t)
+	(latex . t)
+	(org . t)
+	(python . t)
+	(sh . t))))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
