@@ -90,7 +90,34 @@
 						("python" . ?p)
 						("vue" . ?v)
 						("work" . ?w)
-						("home" . ?h))))
+						("home" . ?h))
+		org-confirm-babel-evaluate nil
+		org-src-fontify-natively t
+		org-src-tab-acts-natively t
+		org-startup-truncated nil
+		org-return-follows-link t
+		org-fontify-done-headline t
+		org-fontify-quote-and-verse-blocks t
+		org-fontify-whole-heading-line t
+		org-footnote-section nil
+		org-latex-default-packages-alist '(
+										   ("T1" "fontenc" t)
+										   ("utf8" "inputenc" t)
+										   ;("" "fixltx2e" nil)
+										   ;("" "graphicx" t)
+										   ;("" "longtable" nil)
+										   ;("" "float" nil)
+										   ;("" "wrapfig" nil)
+										   ;("" "rotating" nil)
+										   ;("normalem" "ulem" t)
+										   ;("" "amsmath" t)
+										   ;("" "textcomp" t)
+										   ;("" "marvosym" t)
+										   ;("" "wasysym" t)
+										   ;("" "amssymb" t)
+										   ;("" "hyperref" nil)
+										   ;"\\tolerance=1000"
+										   )))
 
 (use-package org-babel
   :defer t
