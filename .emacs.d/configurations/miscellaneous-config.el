@@ -128,5 +128,10 @@
   :config
   (require 'preview))
 
+(use-package reftex
+  :defer t
+  :init
+  (add-hook 'LaTeX-mode-hook 'turn-on-reftex))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
