@@ -107,5 +107,20 @@
 	(python . t)
 	(sh . t))))
 
+(use-package auctex
+  :ensure t
+  :defer t
+  :mode ("\\.tex$" . TeX-latex-mode)
+  :init
+  (add-hook 'TeX-after-compilation-finished-functions
+			#'TeX-revert-document-buffer)
+  (add-hook 'LaTeX-mode 'visual-line-mode)
+  (add-hook 'latex-mode 'visual-line-mode)
+  :config
+  (setq-default TeX-auto-save t
+				TeX-PDF-mode t
+				TeX-show-compilation nil
+				TeX-parse-self t))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
