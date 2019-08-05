@@ -122,5 +122,11 @@
 				TeX-show-compilation nil
 				TeX-parse-self t))
 
+(use-package latex
+  :defer t
+  :after auctex
+  :config
+  (require 'preview))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
