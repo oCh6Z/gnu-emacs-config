@@ -160,5 +160,12 @@
   :init
   (add-hook 'LaTeX-mode-hook 'turn-on-reftex))
 
+(use-package company-auctex
+  :ensure t
+  :after
+  (:all company latex)
+  :config
+  (company-auctex-init))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
