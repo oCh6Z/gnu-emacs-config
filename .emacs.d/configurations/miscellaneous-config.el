@@ -181,5 +181,11 @@
   :config
   (setq doc-view-continuous t))
 
+(use-package auto-revert
+  :defer t
+  :init
+  (global-auto-revert-mode t)
+  (setq revert-without-query t))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
