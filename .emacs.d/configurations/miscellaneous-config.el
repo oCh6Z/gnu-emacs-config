@@ -117,7 +117,16 @@
 										   ;("" "amssymb" t)
 										   ;("" "hyperref" nil)
 										   ;"\\tolerance=1000"
-										   )))
+										   )
+		org-latex-listings 'minted
+		org-latex-minted-options '(("frame" "lines")
+								   ("fontsize" "\\scriptsize")
+								   ;("linenos" "true")
+								   ;("xleftmargin" "0em")
+								   )
+		org-latex-pdf-process '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+								"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+								"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
 
 (use-package org-babel
   :defer t
