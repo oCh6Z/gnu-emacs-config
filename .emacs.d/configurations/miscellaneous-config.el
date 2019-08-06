@@ -176,5 +176,10 @@
   :config
   (company-auctex-init))
 
+(use-package doc-view
+  :defer t
+  :config
+  (setq doc-view-continuous t))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
