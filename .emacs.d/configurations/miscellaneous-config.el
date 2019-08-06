@@ -187,5 +187,10 @@
   (global-auto-revert-mode t)
   (setq revert-without-query t))
 
+(use-package visual-line
+  :defer t
+  :init
+  (global-visual-line-mode t))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
