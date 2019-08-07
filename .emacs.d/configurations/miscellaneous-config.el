@@ -76,6 +76,10 @@
   ("\\.org$" . org-mode)
   ("\\.txt$" . org-mode)
   :config
+  (add-to-list 'org-structure-template-alist '("LC" "#+LaTeX_CLASS: ?" "<literal style=\"latex\">?</literal>"))
+  (add-to-list 'org-structure-template-alist '("LH" "#+LaTeX_HEADER: ?" "<literal style=\"latex\">?</literal>"))
+  (add-to-list 'org-structure-template-alist '("Lp" "#+LaTeX_HEADER: \\usepackage{?}" "<literal style=\"latex\">\\usepackage{?}</literal>"))
+  (add-to-list 'org-structure-template-alist '("Lpm" "#+LaTeX_HEADER: \\usepackage{minted}" "<literal style=\"latex\">\\usepackage{minted}</literal>"))
   (setq org-directory "~/.emacs.d/org"
 		org-default-notes-file (concat org-directory "/notes.org")
 		org-log-done 'time
