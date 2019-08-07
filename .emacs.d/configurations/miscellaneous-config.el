@@ -102,7 +102,7 @@
 		org-footnote-section nil
 		org-latex-default-packages-alist '(
 										   ("T1" "fontenc" t)
-										   ("utf8" "inputenc" t)
+										   ("AUTO" "inputenc" t)
 										   ;("" "fixltx2e" nil)
 										   ;("" "graphicx" t)
 										   ;("" "longtable" nil)
