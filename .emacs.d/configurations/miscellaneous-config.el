@@ -75,6 +75,14 @@
   :mode
   ("\\.org$" . org-mode)
   ("\\.txt$" . org-mode)
+  :init
+  (require 'ox-ascii)
+  (require 'ox-beamer)
+  (require 'ox-html)
+  (require 'ox-icalendar)
+  (require 'ox-latex)
+  (require 'ox-md)
+  (require 'ox-org)
   :config
   (add-to-list 'org-structure-template-alist '("LC" "#+LaTeX_CLASS: ?" "<literal style=\"latex\">?</literal>"))
   (add-to-list 'org-structure-template-alist '("LH" "#+LaTeX_HEADER: ?" "<literal style=\"latex\">?</literal>"))
@@ -97,14 +105,15 @@
 						("home" . ?h))
 		org-confirm-babel-evaluate nil
 		org-startup-folded nil
+		org-startup-truncated nil
 		org-src-fontify-natively t
 		org-src-tab-acts-natively t
-		org-startup-truncated nil
 		org-return-follows-link t
 		org-fontify-done-headline t
 		org-fontify-quote-and-verse-blocks t
 		org-fontify-whole-heading-line t
 		org-footnote-section nil
+		org-export-backends '(ascii beamer html icalendar latex md org)
 		org-latex-with-hyperref nil
 		org-latex-default-packages-alist '(
 										   ("T1" "fontenc" t)
@@ -130,6 +139,12 @@
 								   ;("linenos" "true")
 								   ;("xleftmargin" "0em")
 								   )
+		org-latex-minted-langs '((emacs-lisp "common-lisp")
+								 (cc "c++")
+								 (cperl "perl")
+								 (shell-script "bash")
+								 (caml "ocaml")
+								 (python "python"))
 		org-latex-pdf-process '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 								"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 								"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
