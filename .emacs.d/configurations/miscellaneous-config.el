@@ -96,6 +96,7 @@
 						("work" . ?w)
 						("home" . ?h))
 		org-confirm-babel-evaluate nil
+		org-startup-folded nil
 		org-src-fontify-natively t
 		org-src-tab-acts-natively t
 		org-startup-truncated nil
@@ -104,6 +105,7 @@
 		org-fontify-quote-and-verse-blocks t
 		org-fontify-whole-heading-line t
 		org-footnote-section nil
+		org-latex-with-hyperref nil
 		org-latex-default-packages-alist '(
 										   ("T1" "fontenc" t)
 										   ("AUTO" "inputenc" t)
