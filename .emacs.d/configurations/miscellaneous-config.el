@@ -173,10 +173,8 @@
 			#'TeX-revert-document-buffer)
   (add-hook 'LaTeX-mode 'visual-line-mode)
   (add-hook 'latex-mode 'visual-line-mode)
-  :config
   (setq-default TeX-auto-save t
-				TeX-PDF-mode t
-				TeX-show-compilation nil
+				TeX-command-extra-options "-synctex=1 -interaction=nonstopmode --shell-escape"
 				TeX-parse-self t))
 
 (use-package latex
