@@ -213,8 +213,7 @@
 
 (use-package multi-term
   :ensure t
-  :config
-  (setq multi-term-program "bin/bash"))
+  :defer t)
 
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
