@@ -211,5 +211,10 @@
   :init
   (global-visual-line-mode t))
 
+(use-package multi-term
+  :ensure t
+  :config
+  (setq multi-term-program "bin/bash"))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
