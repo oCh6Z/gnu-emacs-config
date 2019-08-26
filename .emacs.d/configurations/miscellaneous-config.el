@@ -70,6 +70,7 @@
   :defer t
   :after yasnippet)
 
+;; org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system
 (use-package org
   :defer t
   :mode
@@ -149,6 +150,7 @@
 								"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 								"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")))
 
+;; org-babel supports a growing number of programming languages
 (use-package org-babel
   :defer t
   :after
@@ -164,6 +166,7 @@
 	(python . t)
 	(sh . t))))
 
+;; AUCTeX is an extensible package for writing and formatting TeX files
 (use-package auctex
   :ensure t
   :defer t
@@ -177,17 +180,20 @@
 				TeX-command-extra-options "-synctex=1 -interaction=nonstopmode --shell-escape"
 				TeX-parse-self t))
 
+;; LaTeX is a high-quality typesetting system
 (use-package latex
   :defer t
   :after auctex
   :config
   (require 'preview))
 
+;; RefTeX is a specialized package for support of labels, references, citations, and the indices in LaTeX
 (use-package reftex
   :defer t
   :init
   (add-hook 'LaTeX-mode-hook 'turn-on-reftex))
 
+;; this is a group of backends for company-mode providing auto-completion for AUCTeX
 (use-package company-auctex
   :ensure t
   :after
@@ -195,22 +201,26 @@
   :config
   (company-auctex-init))
 
+;; DocView mode is a major mode for viewing DVI, PostScript (PS), PDF, OpenDocument, and Microsoft Office documents
 (use-package doc-view
   :defer t
   :config
   (setq doc-view-continuous t))
 
+;; automatically reverts the current buffer when its visited file changes on disk
 (use-package auto-revert
   :defer t
   :init
   (global-auto-revert-mode t)
   (setq revert-without-query t))
 
+;; another alternative to ordinary line continuation is to use word wrap
 (use-package visual-line
   :defer t
   :init
   (global-visual-line-mode t))
 
+;; managing multiple terminal buffers
 (use-package multi-term
   :ensure t
   :defer t)
