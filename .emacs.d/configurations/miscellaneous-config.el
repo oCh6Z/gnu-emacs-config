@@ -225,5 +225,10 @@
   :ensure t
   :defer t)
 
+(use-package docker
+  :ensure t
+  :defer t
+  :bind ("C-c d" . docker))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
