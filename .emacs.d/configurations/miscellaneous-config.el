@@ -230,5 +230,11 @@
   :defer t
   :bind ("C-c d" . docker))
 
+(use-package dockerfile-mode
+  :ensure t
+  :defer t
+  :init
+  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
