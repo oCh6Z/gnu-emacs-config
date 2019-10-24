@@ -225,5 +225,22 @@
   :ensure t
   :defer t)
 
+(use-package docker
+  :ensure t
+  :defer t
+  :bind ("C-c d" . docker))
+
+(use-package dockerfile-mode
+  :ensure t
+  :defer t
+  :init
+  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
+
+(use-package docker-compose-mode
+  :ensure t
+  :defer t
+  :init
+  (add-to-list 'auto-mode-alist '("docker-compose.yml\\'" . docker-compose-mode)))
+
 ;; add the symbol name to the features list
 (provide 'miscellaneous-config)
